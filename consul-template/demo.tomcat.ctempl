@@ -1,6 +1,6 @@
 upstream demo_tomcat {
     server 127.0.0.1:1111;# 站位server 必须有一个，否则无法启动
-    {{range service "dev.demo_tomcat@dc"}}
+    {{range service "dev.demo_tomcat@dc1"}}
         server {{.Address}}:{{.Port}} weight = 1;
     {{end}}
 }
