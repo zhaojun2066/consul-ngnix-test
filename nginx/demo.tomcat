@@ -1,4 +1,6 @@
 upstream demo_tomcat {
-    #server 127.0.0.1:1111 down;# 站位server 必须有一个，否则无法启动
+    server 127.0.0.1:1111 down;# 站位server 必须有一个，否则无法启动
+    
+        server 127.0.0.1:8888 weight=1;
     
 }
